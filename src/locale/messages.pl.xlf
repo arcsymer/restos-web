@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" target-language="pl" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="brandSub" datatype="html">
+        <source>ordering &amp; reservations</source>
+        <target>zamówienia i rezerwacje</target>
+      </trans-unit>
+      <trans-unit id="navLabel" datatype="html">
+        <source>Main</source>
+        <target>Główne</target>
+      </trans-unit>
+      <trans-unit id="navMenu" datatype="html">
+        <source>Menu</source>
+        <target>Menu</target>
+      </trans-unit>
+      <trans-unit id="navCart" datatype="html">
+        <source>Cart</source>
+        <target>Koszyk</target>
+      </trans-unit>
+      <trans-unit id="cartItems" datatype="html">
+        <source>items in cart: <x id="INTERPOLATION" equiv-text="{{ cart.count() }}"/></source>
+        <target>produkty w koszyku: <x id="INTERPOLATION" equiv-text="{{ cart.count() }}"/></target>
+      </trans-unit>
+      <trans-unit id="navReserve" datatype="html">
+        <source>Reserve a table</source>
+        <target>Zarezerwuj stolik</target>
+      </trans-unit>
+      <trans-unit id="footer" datatype="html">
+        <source>RestOS demo — synthetic data, no real restaurant.</source>
+        <target>Demo RestOS — dane syntetyczne, brak prawdziwej restauracji.</target>
+      </trans-unit>
+      <trans-unit id="cartTitle" datatype="html">
+        <source>Your cart</source>
+        <target>Twój koszyk</target>
+      </trans-unit>
+      <trans-unit id="orderThanks" datatype="html">
+        <source>Order received!</source>
+        <target>Zamówienie przyjęte!</target>
+      </trans-unit>
+      <trans-unit id="orderSummary" datatype="html">
+        <source> Number <x id="INTERPOLATION" equiv-text="{{ order.orderId }}"/>, total <x id="INTERPOLATION_1" equiv-text="{{ order.totalPln | number: &apos;1.2-2&apos; }}"/> zł, ready in about <x id="INTERPOLATION_2" equiv-text="{{ order.etaMinutes }}"/> minutes. </source>
+        <target> Numer <x id="INTERPOLATION" equiv-text="{{ order.orderId }}"/>, razem <x id="INTERPOLATION_1" equiv-text="{{ order.totalPln | number: &apos;1.2-2&apos; }}"/> zł, gotowe za około <x id="INTERPOLATION_2" equiv-text="{{ order.etaMinutes }}"/> minut. </target>
+      </trans-unit>
+      <trans-unit id="backToMenu" datatype="html">
+        <source>Back to the menu</source>
+        <target>Wróć do menu</target>
+      </trans-unit>
+      <trans-unit id="cartEmpty" datatype="html">
+        <source>Your cart is empty — add something tasty from the menu.</source>
+        <target>Twój koszyk jest pusty — dodaj coś pysznego z menu.</target>
+      </trans-unit>
+      <trans-unit id="toMenu" datatype="html">
+        <source>Go to the menu</source>
+        <target>Przejdź do menu</target>
+      </trans-unit>
+      <trans-unit id="cartCaption" datatype="html">
+        <source>Items in your cart</source>
+        <target>Produkty w Twoim koszyku</target>
+      </trans-unit>
+      <trans-unit id="thDish" datatype="html">
+        <source>Dish</source>
+        <target>Danie</target>
+      </trans-unit>
+      <trans-unit id="thQty" datatype="html">
+        <source>Qty</source>
+        <target>Ilość</target>
+      </trans-unit>
+      <trans-unit id="thPrice" datatype="html">
+        <source>Price</source>
+        <target>Cena</target>
+      </trans-unit>
+      <trans-unit id="total" datatype="html">
+        <source>Total</source>
+        <target>Razem</target>
+      </trans-unit>
+      <trans-unit id="ordering" datatype="html">
+        <source>Sending order…</source>
+        <target>Wysyłanie zamówienia…</target>
+      </trans-unit>
+      <trans-unit id="orderNow" datatype="html">
+        <source>Place order</source>
+        <target>Złóż zamówienie</target>
+      </trans-unit>
+      <trans-unit id="orderHint" datatype="html">
+        <source> Ordering is a demo flow — it is served by the in-browser mock backend. </source>
+        <target> Zamawianie to funkcja demonstracyjna — obsługiwana przez wbudowany mock w przeglądarce. </target>
+      </trans-unit>
+      <trans-unit id="menuTitle" datatype="html">
+        <source>Menu</source>
+        <target>Menu</target>
+      </trans-unit>
+      <trans-unit id="allergens" datatype="html">
+        <source>Allergens:</source>
+        <target>Alergeny:</target>
+      </trans-unit>
+      <trans-unit id="addToCart" datatype="html">
+        <source> Add </source>
+        <target> Dodaj </target>
+      </trans-unit>
+      <trans-unit id="menuLoading" datatype="html">
+        <source>Loading the menu…</source>
+        <target>Ładowanie menu…</target>
+      </trans-unit>
+      <trans-unit id="reserveTitle" datatype="html">
+        <source>Reserve a table</source>
+        <target>Zarezerwuj stolik</target>
+      </trans-unit>
+      <trans-unit id="reserveThanks" datatype="html">
+        <source>Reservation confirmed!</source>
+        <target>Rezerwacja potwierdzona!</target>
+      </trans-unit>
+      <trans-unit id="reserveSummary" datatype="html">
+        <source> Table <x id="INTERPOLATION" equiv-text="{{ res.tableName }}"/> on <x id="INTERPOLATION_1" equiv-text="{{ res.date }}"/> at <x id="INTERPOLATION_2" equiv-text="{{ res.slot }}"/> for <x id="INTERPOLATION_3" equiv-text="{{ res.partySize }}"/> — see you soon, <x id="INTERPOLATION_4" equiv-text="{{ res.guestName }}"/>. </source>
+        <target> Stolik <x id="INTERPOLATION" equiv-text="{{ res.tableName }}"/> dnia <x id="INTERPOLATION_1" equiv-text="{{ res.date }}"/> o <x id="INTERPOLATION_2" equiv-text="{{ res.slot }}"/> dla <x id="INTERPOLATION_3" equiv-text="{{ res.partySize }}"/> osób — do zobaczenia, <x id="INTERPOLATION_4" equiv-text="{{ res.guestName }}"/>. </target>
+      </trans-unit>
+      <trans-unit id="whenLegend" datatype="html">
+        <source>When and how many</source>
+        <target>Kiedy i ile osób</target>
+      </trans-unit>
+      <trans-unit id="dateLabel" datatype="html">
+        <source>Date</source>
+        <target>Data</target>
+      </trans-unit>
+      <trans-unit id="dateError" datatype="html">
+        <source>Pick a date.</source>
+        <target>Wybierz datę.</target>
+      </trans-unit>
+      <trans-unit id="slotLabel" datatype="html">
+        <source>Time</source>
+        <target>Godzina</target>
+      </trans-unit>
+      <trans-unit id="partyLabel" datatype="html">
+        <source>Party size</source>
+        <target>Liczba osób</target>
+      </trans-unit>
+      <trans-unit id="partyError" datatype="html">
+        <source>Between 1 and 12 guests.</source>
+        <target>Od 1 do 12 osób.</target>
+      </trans-unit>
+      <trans-unit id="checking" datatype="html">
+        <source>Checking…</source>
+        <target>Sprawdzanie…</target>
+      </trans-unit>
+      <trans-unit id="checkAvailability" datatype="html">
+        <source>Check availability</source>
+        <target>Sprawdź dostępność</target>
+      </trans-unit>
+      <trans-unit id="tableLegend" datatype="html">
+        <source>Choose a table</source>
+        <target>Wybierz stolik</target>
+      </trans-unit>
+      <trans-unit id="noTables" datatype="html">
+        <source> No free table fits that party at this time — try another slot. </source>
+        <target> Brak wolnego stolika dla tej liczby osób o tej porze — wybierz inną godzinę. </target>
+      </trans-unit>
+      <trans-unit id="tableChoice" datatype="html">
+        <source>Available tables</source>
+        <target>Dostępne stoliki</target>
+      </trans-unit>
+      <trans-unit id="seats" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ table.seats }}"/> seats</source>
+        <target><x id="INTERPOLATION" equiv-text="{{ table.seats }}"/> miejsc</target>
+      </trans-unit>
+      <trans-unit id="guestLegend" datatype="html">
+        <source>Your details</source>
+        <target>Twoje dane</target>
+      </trans-unit>
+      <trans-unit id="nameLabel" datatype="html">
+        <source>Name</source>
+        <target>Imię i nazwisko</target>
+      </trans-unit>
+      <trans-unit id="nameError" datatype="html">
+        <source>Tell us your name.</source>
+        <target>Podaj swoje imię.</target>
+      </trans-unit>
+      <trans-unit id="phoneLabel" datatype="html">
+        <source>Phone</source>
+        <target>Telefon</target>
+      </trans-unit>
+      <trans-unit id="phoneError" datatype="html">
+        <source> A phone number, e.g. +48 600 100 200. </source>
+        <target> Numer telefonu, np. +48 600 100 200. </target>
+      </trans-unit>
+      <trans-unit id="reserving" datatype="html">
+        <source>Reserving…</source>
+        <target>Rezerwowanie…</target>
+      </trans-unit>
+      <trans-unit id="reserveNow" datatype="html">
+        <source>Reserve</source>
+        <target>Zarezerwuj</target>
+      </trans-unit>
+      <trans-unit id="langLabel" datatype="html">
+        <source>Language</source>
+        <target>Język</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -14,6 +14,22 @@
     </a>
     <a routerLink="/reserve" routerLinkActive="active" i18n="@@navReserve">Reserve a table</a>
   </nav>
+  <div class="lang-switch" role="group" aria-label="Language" i18n-aria-label="@@langLabel">
+    <a
+      href="../en-US/"
+      [class.active]="locale === 'en-US'"
+      [attr.aria-current]="locale === 'en-US' ? 'true' : null"
+      hreflang="en"
+      >EN</a
+    >
+    <a
+      href="../pl/"
+      [class.active]="locale === 'pl'"
+      [attr.aria-current]="locale === 'pl' ? 'true' : null"
+      hreflang="pl"
+      >PL</a
+    >
+  </div>
   <button
     type="button"
     class="mode-chip"

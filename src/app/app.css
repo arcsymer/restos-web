@@ -47,6 +47,28 @@
   margin-left: 4px;
 }
 
+.lang-switch {
+  display: flex;
+  gap: 2px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.lang-switch a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 12px;
+  padding: 3px 10px;
+  letter-spacing: 0.05em;
+}
+
+.lang-switch a.active {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+}
+
 .mode-chip {
   border: 1px solid var(--ok);
   color: var(--ok);

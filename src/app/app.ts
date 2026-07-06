@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, LOCALE_ID, inject } from '@angular/core';
 import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { ModeService } from './api/mode.service';
 import { CartStore } from './cart/cart.store';
@@ -12,6 +12,9 @@ import { CartStore } from './cart/cart.store';
 export class App {
   protected readonly mode = inject(ModeService);
   protected readonly cart = inject(CartStore);
+  // 'en-US' in the source build, 'pl' in the localized build; drives the
+  // language switcher (each locale is a separate static build, e.g. /pl/)
+  protected readonly locale = inject(LOCALE_ID);
 
   constructor() {
     const router = inject(Router);

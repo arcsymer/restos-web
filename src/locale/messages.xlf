@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="brandSub" datatype="html">
+        <source>ordering &amp; reservations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navLabel" datatype="html">
+        <source>Main</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navMenu" datatype="html">
+        <source>Menu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navCart" datatype="html">
+        <source>Cart</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cartItems" datatype="html">
+        <source>items in cart: <x id="INTERPOLATION" equiv-text="{{ cart.count() }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">12,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navReserve" datatype="html">
+        <source>Reserve a table</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">15,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="langLabel" datatype="html">
+        <source>Language</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer" datatype="html">
+        <source>RestOS demo — synthetic data, no real restaurant.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cartTitle" datatype="html">
+        <source>Your cart</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cart/cart-page.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderThanks" datatype="html">
+        <source>Order received!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cart/cart-page.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderSummary" datatype="html">
+        <source> Number <x id="INTERPOLATION" equiv-text="{{ order.orderId }}"/>, total <x id="INTERPOLATION_1" equiv-text="{{ order.totalPln | number: &apos;1.2-2&apos; }}"/> zł, ready in about <x id="INTERPOLATION_2" equiv-text="{{ order.etaMinutes }}"/> minutes. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cart/cart-page.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="backToMenu" datatype="html">
+        <source>Back to the menu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cart/cart-page.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cartEmpty" datatype="html">
+        <source>Your cart is empty — add something tasty from the menu.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cart/cart-page.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="toMenu" datatype="html">
+        <source>Go to the menu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cart/cart-page.html</context>
+          <context context-type="linenumber">14,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cartCaption" datatype="html">
+        <source>Items in your cart</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cart/cart-page.html</context>
+          <context context-type="linenumber">20,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="thDish" datatype="html">
+        <source>Dish</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cart/cart-page.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="thQty" datatype="html">
+        <source>Qty</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cart/cart-page.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="thPrice" datatype="html">
+        <source>Price</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cart/cart-page.html</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="total" datatype="html">
+        <source>Total</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cart/cart-page.html</context>
+          <context context-type="linenumber">57,58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ordering" datatype="html">
+        <source>Sending order…</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cart/cart-page.html</context>
+          <context context-type="linenumber">65,66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderNow" datatype="html">
+        <source>Place order</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cart/cart-page.html</context>
+          <context context-type="linenumber">67,69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderHint" datatype="html">
+        <source> Ordering is a demo flow — it is served by the in-browser mock backend. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cart/cart-page.html</context>
+          <context context-type="linenumber">71,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="menuTitle" datatype="html">
+        <source>Menu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/menu/menu-page.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="allergens" datatype="html">
+        <source>Allergens:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/menu/menu-page.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="addToCart" datatype="html">
+        <source> Add </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/menu/menu-page.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="menuLoading" datatype="html">
+        <source>Loading the menu…</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/menu/menu-page.html</context>
+          <context context-type="linenumber">45,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reserveTitle" datatype="html">
+        <source>Reserve a table</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reserveThanks" datatype="html">
+        <source>Reservation confirmed!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reserveSummary" datatype="html">
+        <source> Table <x id="INTERPOLATION" equiv-text="{{ res.tableName }}"/> on <x id="INTERPOLATION_1" equiv-text="{{ res.date }}"/> at <x id="INTERPOLATION_2" equiv-text="{{ res.slot }}"/> for <x id="INTERPOLATION_3" equiv-text="{{ res.partySize }}"/> — see you soon, <x id="INTERPOLATION_4" equiv-text="{{ res.guestName }}"/>. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="whenLegend" datatype="html">
+        <source>When and how many</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">14,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dateLabel" datatype="html">
+        <source>Date</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dateError" datatype="html">
+        <source>Pick a date.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">20,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="slotLabel" datatype="html">
+        <source>Time</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="partyLabel" datatype="html">
+        <source>Party size</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="partyError" datatype="html">
+        <source>Between 1 and 12 guests.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checking" datatype="html">
+        <source>Checking…</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">43,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checkAvailability" datatype="html">
+        <source>Check availability</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">45,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tableLegend" datatype="html">
+        <source>Choose a table</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="noTables" datatype="html">
+        <source> No free table fits that party at this time — try another slot. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tableChoice" datatype="html">
+        <source>Available tables</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seats" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ table.seats }}"/> seats</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="guestLegend" datatype="html">
+        <source>Your details</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">77,78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nameLabel" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">79,80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nameError" datatype="html">
+        <source>Tell us your name.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">82,84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="phoneLabel" datatype="html">
+        <source>Phone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">86,87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="phoneError" datatype="html">
+        <source> A phone number, e.g. +48 600 100 200. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">91,92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reserving" datatype="html">
+        <source>Reserving…</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">106,107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reserveNow" datatype="html">
+        <source>Reserve</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reserve/reserve-page.html</context>
+          <context context-type="linenumber">108,109</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
