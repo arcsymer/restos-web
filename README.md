@@ -23,7 +23,7 @@ Open <http://localhost:4200>.
 ## Testing
 
 ```sh
-pnpm test -- --watch=false --browsers=ChromeHeadless
+pnpm run test:ci
 ```
 
 ## License

@@ -21,7 +21,7 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm run build
       - name: unit tests (headless)
-        run: pnpm test -- --watch=false --browsers=ChromeHeadless
+        run: pnpm run test:ci
 
   gitleaks:
     runs-on: ubuntu-latest
