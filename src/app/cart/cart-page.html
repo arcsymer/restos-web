@@ -1,0 +1,73 @@
+<h1 i18n="@@cartTitle">Your cart</h1>
+
+@if (confirmation(); as order) {
+  <div class="ok-box" role="status">
+    <strong i18n="@@orderThanks">Order received!</strong>
+    <span i18n="@@orderSummary">
+      Number {{ order.orderId }}, total {{ order.totalPln | number: '1.2-2' }} zł,
+      ready in about {{ order.etaMinutes }} minutes.
+    </span>
+  </div>
+  <a routerLink="/menu" i18n="@@backToMenu">Back to the menu</a>
+} @else if (cart.lines().length === 0) {
+  <p i18n="@@cartEmpty">Your cart is empty — add something tasty from the menu.</p>
+  <a routerLink="/menu" i18n="@@toMenu">Go to the menu</a>
+} @else {
+  @if (error()) {
+    <div class="error-box" role="alert">{{ error() }}</div>
+  }
+  <table class="cart-table">
+    <caption class="sr-only" i18n="@@cartCaption">Items in your cart</caption>
+    <thead>
+      <tr>
+        <th scope="col" i18n="@@thDish">Dish</th>
+        <th scope="col" i18n="@@thQty">Qty</th>
+        <th scope="col" class="num" i18n="@@thPrice">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (line of cart.lines(); track line.item.id) {
+        <tr>
+          <td>{{ line.item.namePl }}</td>
+          <td class="qty-cell">
+            <button
+              type="button"
+              class="btn-quiet"
+              (click)="cart.setQty(line.item.id, line.qty - 1)"
+              [attr.aria-label]="'Remove one ' + line.item.nameEn"
+            >
+              −
+            </button>
+            <span aria-live="polite">{{ line.qty }}</span>
+            <button
+              type="button"
+              class="btn-quiet"
+              (click)="cart.setQty(line.item.id, line.qty + 1)"
+              [attr.aria-label]="'Add one more ' + line.item.nameEn"
+            >
+              +
+            </button>
+          </td>
+          <td class="num">{{ line.item.pricePln * line.qty | number: '1.2-2' }} zł</td>
+        </tr>
+      }
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row" colspan="2" i18n="@@total">Total</th>
+        <td class="num total">{{ cart.totalPln() | number: '1.2-2' }} zł</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <button type="button" class="btn" (click)="submit()" [disabled]="submitting()">
+    @if (submitting()) {
+      <ng-container i18n="@@ordering">Sending order…</ng-container>
+    } @else {
+      <ng-container i18n="@@orderNow">Place order</ng-container>
+    }
+  </button>
+  <p class="hint" i18n="@@orderHint">
+    Ordering is a demo flow — it is served by the in-browser mock backend.
+  </p>
+}

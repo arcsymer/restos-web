@@ -1,0 +1,84 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 14px 24px;
+  background: var(--panel);
+  border-bottom: 2px solid var(--accent);
+  flex-wrap: wrap;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.brand-sub {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 18px;
+  margin-left: auto;
+}
+
+.site-header nav a {
+  text-decoration: none;
+  color: var(--ink);
+  padding: 6px 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.site-header nav a.active {
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+}
+
+.cart-badge {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 12px;
+  padding: 1px 7px;
+  margin-left: 4px;
+}
+
+.mode-chip {
+  border: 1px solid var(--ok);
+  color: var(--ok);
+  background: transparent;
+  border-radius: 999px;
+  font-size: 12px;
+  padding: 3px 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.mode-chip.mock {
+  border-color: var(--muted);
+  color: var(--muted);
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+main:focus {
+  outline: none;
+}
+
+.site-footer {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 18px;
+  border-top: 1px solid var(--border);
+}

@@ -1,0 +1,46 @@
+<h1 i18n="@@menuTitle">Menu</h1>
+
+<p class="sr-only" role="status" aria-live="polite">{{ announcement() }}</p>
+
+@if (error()) {
+  <div class="error-box" role="alert">{{ error() }}</div>
+}
+
+@if (categories(); as cats) {
+  @for (category of cats; track category.code) {
+    <section [attr.aria-labelledby]="'cat-' + category.code">
+      <h2 [id]="'cat-' + category.code">{{ category.nameEn }}</h2>
+      <ul class="items">
+        @for (item of category.items; track item.id) {
+          <li class="panel item">
+            <div class="item-text">
+              <span class="item-name">{{ item.namePl }}</span>
+              <span class="item-name-en">{{ item.nameEn }}</span>
+              <p class="item-desc">{{ item.description }}</p>
+              @if (item.allergens.length > 0) {
+                <p class="allergens">
+                  <span i18n="@@allergens">Allergens:</span>
+                  {{ item.allergens.join(', ') }}
+                </p>
+              }
+            </div>
+            <div class="item-buy">
+              <span class="price">{{ item.pricePln | number: '1.2-2' }} zł</span>
+              <button
+                type="button"
+                class="btn"
+                (click)="add(item)"
+                [attr.aria-label]="'Add ' + item.nameEn + ' to cart'"
+                i18n="@@addToCart"
+              >
+                Add
+              </button>
+            </div>
+          </li>
+        }
+      </ul>
+    </section>
+  }
+} @else if (!error()) {
+  <p i18n="@@menuLoading">Loading the menu…</p>
+}

@@ -1,1 +1,106 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bg: #faf6ef;
+  --panel: #ffffff;
+  --ink: #2b2620;
+  --muted: #6f6659;
+  --accent: #b4552d;
+  --accent-soft: #f3e2d8;
+  --ok: #3e7d4f;
+  --bad: #a33327;
+  --border: #e4dccd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: var(--accent);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.btn {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 16px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-quiet {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 0;
+  border-radius: 6px;
+  padding: 6px 12px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.error-box {
+  background: #fbeae7;
+  border: 1px solid var(--bad);
+  border-radius: 8px;
+  color: var(--bad);
+  padding: 10px 14px;
+  margin: 12px 0;
+}
+
+.ok-box {
+  background: #e9f4ec;
+  border: 1px solid var(--ok);
+  border-radius: 8px;
+  color: var(--ok);
+  padding: 10px 14px;
+  margin: 12px 0;
+}

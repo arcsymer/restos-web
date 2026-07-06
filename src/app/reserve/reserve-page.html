@@ -1,0 +1,114 @@
+<h1 i18n="@@reserveTitle">Reserve a table</h1>
+
+@if (confirmation(); as res) {
+  <div class="ok-box" role="status">
+    <strong i18n="@@reserveThanks">Reservation confirmed!</strong>
+    <span i18n="@@reserveSummary">
+      Table {{ res.tableName }} on {{ res.date }} at {{ res.slot }} for
+      {{ res.partySize }} — see you soon, {{ res.guestName }}.
+    </span>
+  </div>
+} @else {
+  <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+    <fieldset class="panel">
+      <legend i18n="@@whenLegend">When and how many</legend>
+
+      <div class="field">
+        <label for="date" i18n="@@dateLabel">Date</label>
+        <input id="date" type="date" formControlName="date" required />
+        @if (invalid('date')) {
+          <p class="field-error" role="alert" i18n="@@dateError">Pick a date.</p>
+        }
+      </div>
+
+      <div class="field">
+        <label for="slot" i18n="@@slotLabel">Time</label>
+        <select id="slot" formControlName="slot" required>
+          @for (slot of slots; track slot) {
+            <option [value]="slot">{{ slot }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="partySize" i18n="@@partyLabel">Party size</label>
+        <input id="partySize" type="number" formControlName="partySize" min="1" max="12" required />
+        @if (invalid('partySize')) {
+          <p class="field-error" role="alert" i18n="@@partyError">Between 1 and 12 guests.</p>
+        }
+      </div>
+
+      <button type="button" class="btn-quiet" (click)="checkAvailability()" [disabled]="checking()">
+        @if (checking()) {
+          <ng-container i18n="@@checking">Checking…</ng-container>
+        } @else {
+          <ng-container i18n="@@checkAvailability">Check availability</ng-container>
+        }
+      </button>
+    </fieldset>
+
+    @if (tables(); as available) {
+      <fieldset class="panel">
+        <legend i18n="@@tableLegend">Choose a table</legend>
+        @if (available.length === 0) {
+          <p role="status" i18n="@@noTables">
+            No free table fits that party at this time — try another slot.
+          </p>
+        } @else {
+          <div class="table-options" role="radiogroup" aria-labelledby="table-choice-label">
+            <span id="table-choice-label" class="sr-only" i18n="@@tableChoice">Available tables</span>
+            @for (table of available; track table.id) {
+              <label class="table-option" [class.selected]="selectedTableId() === table.id">
+                <input
+                  type="radio"
+                  name="tableId"
+                  [value]="table.id"
+                  [checked]="selectedTableId() === table.id"
+                  (change)="selectedTableId.set(table.id)"
+                />
+                {{ table.name }} · <ng-container i18n="@@seats">{{ table.seats }} seats</ng-container>
+              </label>
+            }
+          </div>
+        }
+      </fieldset>
+
+      <fieldset class="panel">
+        <legend i18n="@@guestLegend">Your details</legend>
+        <div class="field">
+          <label for="guestName" i18n="@@nameLabel">Name</label>
+          <input id="guestName" type="text" formControlName="guestName" autocomplete="name" required />
+          @if (invalid('guestName')) {
+            <p class="field-error" role="alert" i18n="@@nameError">Tell us your name.</p>
+          }
+        </div>
+        <div class="field">
+          <label for="phone" i18n="@@phoneLabel">Phone</label>
+          <input id="phone" type="tel" formControlName="phone" autocomplete="tel"
+                 placeholder="+48 600 100 200" required />
+          @if (invalid('phone')) {
+            <p class="field-error" role="alert" i18n="@@phoneError">
+              A phone number, e.g. +48 600 100 200.
+            </p>
+          }
+        </div>
+
+        @if (error()) {
+          <div class="error-box" role="alert">{{ error() }}</div>
+        }
+
+        <button
+          type="submit"
+          class="btn"
+          [disabled]="submitting() || selectedTableId() === null"
+        >
+          @if (submitting()) {
+            <ng-container i18n="@@reserving">Reserving…</ng-container>
+          } @else {
+            <ng-container i18n="@@reserveNow">Reserve</ng-container>
+          }
+        </button>
+      </fieldset>
+    }
+  </form>
+}
