@@ -1,0 +1,61 @@
+name: pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      # production build is localized (en-US + pl) into browser/<locale>/
+      - run: pnpm exec ng build --configuration production --base-href /restos-web/
+      - name: Landing redirect + SPA deep-link fallback
+        run: |
+          cd dist/restos-web/browser
+          cat > index.html <<'EOF'
+          <!doctype html>
+          <html lang="en">
+            <head>
+              <meta charset="utf-8" />
+              <title>restos-web — Bar Mleczny Nowa</title>
+              <meta http-equiv="refresh" content="0; url=./en-US/" />
+              <link rel="canonical" href="./en-US/" />
+            </head>
+            <body>Redirecting to <a href="./en-US/">the app</a>…</body>
+          </html>
+          EOF
+          # GitHub Pages serves 404.html for any unresolved path (SPA fallback)
+          cp index.html 404.html
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/restos-web/browser
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

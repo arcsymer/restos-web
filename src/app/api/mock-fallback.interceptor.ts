@@ -41,7 +41,8 @@ function respondFromMock(
   mock: MockBackend,
   req: HttpRequest<unknown>,
 ): Observable<HttpResponse<unknown>> {
-  const url = new URL(req.url, 'http://mock.local');
+  // urlWithParams (not url) — Angular keeps query params out of req.url
+  const url = new URL(req.urlWithParams, 'http://mock.local');
   const path = url.pathname;
 
   if (req.method === 'GET' && path.endsWith('/api/v1/menu')) {

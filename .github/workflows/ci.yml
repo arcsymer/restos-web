@@ -23,6 +23,23 @@ jobs:
       - name: unit tests (headless)
         run: pnpm run test:ci
 
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: install Playwright browser
+        run: pnpm exec playwright install --with-deps chromium
+      - name: e2e (Playwright, mock mode + axe a11y)
+        run: pnpm run e2e
+
   gitleaks:
     runs-on: ubuntu-latest
     steps:
