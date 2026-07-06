@@ -78,6 +78,8 @@ Limitations).
 ```sh
 pnpm run build          # production build (localized: en-US + pl)
 pnpm run test:ci        # unit tests, headless Chrome
+
+pnpm exec playwright install chromium   # once, on a fresh clone
 pnpm run e2e            # Playwright e2e + axe (auto-starts the dev server)
 ```
 
