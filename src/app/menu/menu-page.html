@@ -9,7 +9,16 @@
 @if (categories(); as cats) {
   @for (category of cats; track category.code) {
     <section [attr.aria-labelledby]="'cat-' + category.code">
-      <h2 [id]="'cat-' + category.code">{{ category.nameEn }}</h2>
+      <h2 [id]="'cat-' + category.code">
+        @switch (category.code) {
+          @case ('soups') { <ng-container i18n="@@catSoups">Soups</ng-container> }
+          @case ('mains') { <ng-container i18n="@@catMains">Mains</ng-container> }
+          @case ('sides') { <ng-container i18n="@@catSides">Sides</ng-container> }
+          @case ('drinks') { <ng-container i18n="@@catDrinks">Drinks</ng-container> }
+          @case ('desserts') { <ng-container i18n="@@catDesserts">Desserts</ng-container> }
+          @default { {{ category.nameEn }} }
+        }
+      </h2>
       <ul class="items">
         @for (item of category.items; track item.id) {
           <li class="panel item">

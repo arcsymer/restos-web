@@ -194,6 +194,26 @@
         <source>Language</source>
         <target>Język</target>
       </trans-unit>
+      <trans-unit id="catSoups" datatype="html">
+        <source>Soups</source>
+        <target>Zupy</target>
+      </trans-unit>
+      <trans-unit id="catMains" datatype="html">
+        <source>Mains</source>
+        <target>Dania główne</target>
+      </trans-unit>
+      <trans-unit id="catSides" datatype="html">
+        <source>Sides</source>
+        <target>Dodatki</target>
+      </trans-unit>
+      <trans-unit id="catDrinks" datatype="html">
+        <source>Drinks</source>
+        <target>Napoje</target>
+      </trans-unit>
+      <trans-unit id="catDesserts" datatype="html">
+        <source>Desserts</source>
+        <target>Desery</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

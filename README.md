@@ -21,7 +21,7 @@ when it isn't, so the whole thing runs from a static page with zero setup.
 
 ## Quickstart
 
-Prerequisites: **Node 22+** and **pnpm**.
+Prerequisites: **Node 22+** and **pnpm 9+**.
 
 ```sh
 git clone https://github.com/arcsymer/restos-web && cd restos-web
@@ -94,8 +94,9 @@ gitleaks history scan; a separate workflow deploys the localized build to Pages 
 - The mock backend keeps state in memory for the tab's lifetime only — a refresh resets it.
 - Anyone can create/see reservations; there's no auth (matches the restos-core MVP).
 - All data is synthetic (one fictional milk bar). No real users or restaurant.
-- The demo is deployed in permanent mock mode (GitHub Pages is static — there's no backend to
-  reach), which also exercises the fallback path end to end.
+- On the GitHub Pages demo there is no backend to reach (Pages is static), so the app boots in
+  `live` mode, the first API call fails, and it auto-falls-back to `mock` — exercising the
+  fallback path end to end on every visit (you'll see the header chip flip `live` → `mock`).
 
 ## v2 ideas
 

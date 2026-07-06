@@ -163,25 +163,60 @@
           <context context-type="linenumber">1,3</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="catSoups" datatype="html">
+        <source>Soups</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/menu/menu-page.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catMains" datatype="html">
+        <source>Mains</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/menu/menu-page.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catSides" datatype="html">
+        <source>Sides</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/menu/menu-page.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catDrinks" datatype="html">
+        <source>Drinks</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/menu/menu-page.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catDesserts" datatype="html">
+        <source>Desserts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/menu/menu-page.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="allergens" datatype="html">
         <source>Allergens:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/menu/menu-page.html</context>
-          <context context-type="linenumber">22,23</context>
+          <context context-type="linenumber">31,32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="addToCart" datatype="html">
         <source> Add </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/menu/menu-page.html</context>
-          <context context-type="linenumber">36,37</context>
+          <context context-type="linenumber">45,46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="menuLoading" datatype="html">
         <source>Loading the menu…</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/menu/menu-page.html</context>
-          <context context-type="linenumber">45,47</context>
+          <context context-type="linenumber">54,56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="reserveTitle" datatype="html">
