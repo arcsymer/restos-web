@@ -46,7 +46,7 @@ jobs:
           EOF
           # GitHub Pages serves 404.html for any unresolved path (SPA fallback)
           cp index.html 404.html
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: dist/restos-web/browser
 
