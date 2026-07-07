@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@angular/build": "^20.3.31",
-    "@angular/cli": "^20.3.31",
+    "@angular/cli": "^22.0.5",
     "@angular/compiler-cli": "^20.3.0",
     "@angular/localize": "20.3.25",
     "@axe-core/playwright": "^4.12.1",
